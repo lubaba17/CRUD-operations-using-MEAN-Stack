@@ -1,0 +1,72 @@
+.navbar-default  {
+	background-color: #2857a5;
+}
+
+.logo{
+	width: :50px;
+	height:50px;
+	padding: 10px 0 5px;
+}
+
+.navbar-brand,
+.navbar-nav li a{
+	line-height: : 80px;
+	padding: 0 40px;
+	background-color: #2857a5;
+	font-family: 'Oswald', sans-serif ;
+	color:#fff;
+	font-size: 1.3em;
+	border-right: 3px solid ;
+	border-left: 3px solid ;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color:#ffffff;
+}
+
+.navbar-nav li a{
+	padding: 15 40px;
+}
+
+li.twitter a{
+	width: 80px;
+	background-color: #5ea9dd !important;
+	color: #fff !important;
+	font-size: 1.6em;
+	text-align: center;;
+	box-shadow: none;
+	border-right: none;
+	border-left: 5px solid ;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: #3d3d3d;
+}
+
+li.facebook a{
+	width: 80px;
+	background-color: #3b5998 !important;
+	color: #fff !important;
+	font-size: 1.6em;
+	text-align: center;;
+	box-shadow: none;
+	border-right: none;
+	border-left: 5px solid ;
+}
+li.twitter a:hover,
+li.facebook a:hover{
+	opacity: .8;
+}
+
+@media (max-width: 786px){
+	.navbar-default .navbar-nav>li>a{
+		width: 100%;
+		border-bottom: 1px solid #3d3d3d;
+		text-align: center;
+	}
+}
+
+
+
+
+

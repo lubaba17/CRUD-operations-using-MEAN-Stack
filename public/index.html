@@ -1,0 +1,119 @@
+<!DOCTYPE>
+<html ng-app ="myApp">
+<head>
+	<title>Organization</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Slabo+27px' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="custom.css">
+
+</head>
+	<body>
+		<header>
+	<nav class="navbar navbar-default" role="navigation" id="head">
+	  <div class="container-fluid">
+	  	<div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    
+	    <a class="navbar-brand" href="index.html"><img src="logo.png" class="logo"></a>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="show.html">Table View</a></li>
+	        <li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+	        <li class="facebook"><a href="https://www.facebook.com/login/"><i class="fa fa-facebook"></i></a></li>
+
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  
+	  </div><!-- /.container-fluid -->
+</nav>
+		<div class="container" ng-controller ="AppCtrl"><br>
+			<h1><span class="label label-info">Organization Chart App</span></h1><br>
+			<table class="table table-hover">
+				<thead>
+					<tr><th><h4>S.No.</h4></th>
+						<th><h4>Name</h4></th>
+						<th><h4>Designation</h4></th>
+						<th><h4>Manager</h4></th>
+						<th><h4>Action</h4></th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td></td>
+						<td><input class="form-control" ng-model="contact.name"></td>
+						<td><input class="form-control" ng-model="contact.designation"></td>						
+						<td><select class="form-control" ng-model="contact.manager" placeholder="Select an option...">
+								<option> - </option>
+								<option>Rajiv Shukla</option>
+								<option>Lohani Munkare</option>
+								<option>Mamta Veerandaram</option>
+						        <option>Payal Sreedharan</option>
+						        <option>Venkateshwara</option>
+						        <option>Muneet Mishra</option>
+						        <option>Ajit Moily</option>
+						        <option>Mani Molappam</option>
+						        <option>Somia Majumdar</option>
+						        <option>Amrit Singh</option>
+						        <option>Sreedharan</option>
+						         <option>Anchal Shah</option>
+						        <option>Birju Sahasrabuddhe</option>
+						        <option>Anika Shetty</option>
+						        <option>Phani Bajaj</option>
+						        <option>Torsha Gupta</option>
+						        <option>Michael Francis</option>
+						        <option>Tanu Bannerjee</option>
+						        <option>Sanjeev Kumar</option>
+						        <option>Manik Malik</option>
+						        <option>Salim Khan</option>
+						        <option>Gayatri </option>
+						        <option>Molly Thomas</option>
+						        <option>Rajesh Kulkarni</option>
+						    </select>
+						</td>
+						<td><button class="btn btn-primary" ng-click="addContact()"> Add Employee</button>
+						</td>
+						<td><button class="btn btn-info" ng-click="update()"> Update</button> &nbsp;
+						 &nbsp; <button class="btn btn-info" ng-click="deselect()">Clear
+						</td>
+					</tr>
+
+					<!--ng-repeat will copy our three objects into three separate rows-->
+					<tr ng-repeat ="contact in organization">
+						<td>{{$index + 1}}</td>
+						<td> {{contact.name}} </td>
+						<td> {{contact.designation}} </td>
+						<td> {{contact.manager}} </td>
+						<td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button>
+						</td>
+						<td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!--Connecting controller.js file with index.html file-->
+		<script src="controllers/controller.js"></script>
+	</body>
+</html>
